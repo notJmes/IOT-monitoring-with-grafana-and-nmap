@@ -1,0 +1,883 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 1,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 7,
+        "panels": [],
+        "title": "Samuel Bedroom Lights",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "fixedColor": "text",
+              "mode": "palette-classic-by-name",
+              "seriesBy": "min"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 16,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "noValue": "-1",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-red",
+                  "value": null
+                },
+                {
+                  "color": "light-blue",
+                  "value": 0
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 12,
+          "x": 0,
+          "y": 1
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-sweep\"}",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Latency Trend",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [
+                {
+                  "path": "devices"
+                }
+              ],
+              "keepTime": true,
+              "replace": true,
+              "source": "Line"
+            }
+          },
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [
+                {
+                  "alias": "Tuya 1",
+                  "path": "38:1F:8D:20:87:55.latency"
+                },
+                {
+                  "alias": "Tuya 2",
+                  "path": "38:1F:8D:20:83:EA.latency"
+                },
+                {
+                  "alias": "Tuya 3",
+                  "path": "38:1F:8D:20:77:2D.latency"
+                },
+                {
+                  "alias": " Tuya 4",
+                  "path": "38:1F:8D:20:7D:87.latency"
+                },
+                {
+                  "alias": "Tuya 5",
+                  "path": "38:1F:8D:20:88:21.latency"
+                },
+                {
+                  "alias": "Tuya 6",
+                  "path": "38:1F:8D:20:82:A4.latency"
+                }
+              ],
+              "keepTime": true,
+              "replace": true,
+              "source": "devices"
+            }
+          },
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 1"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 2"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 3"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": " Tuya 4"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 5"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 6"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "noValue": "0",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-red",
+                  "value": null
+                },
+                {
+                  "color": "light-green",
+                  "value": 0
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 0.8
+                },
+                {
+                  "color": "semi-dark-orange",
+                  "value": 1
+                }
+              ]
+            },
+            "unit": "s"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 12,
+          "x": 12,
+          "y": 1
+        },
+        "id": 8,
+        "options": {
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-sweep\"}",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Latency Trend",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [
+                {
+                  "path": "devices"
+                }
+              ],
+              "keepTime": true,
+              "replace": true,
+              "source": "Line"
+            }
+          },
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [
+                {
+                  "alias": "Tuya 1",
+                  "path": "38:1F:8D:20:87:55.latency"
+                },
+                {
+                  "alias": "Tuya 2",
+                  "path": "38:1F:8D:20:83:EA.latency"
+                },
+                {
+                  "alias": "Tuya 3",
+                  "path": "38:1F:8D:20:77:2D.latency"
+                },
+                {
+                  "alias": " Tuya 4",
+                  "path": "38:1F:8D:20:7D:87.latency"
+                },
+                {
+                  "alias": "Tuya 5",
+                  "path": "38:1F:8D:20:88:21.latency"
+                },
+                {
+                  "alias": "Tuya 6",
+                  "path": "38:1F:8D:20:82:A4.latency"
+                }
+              ],
+              "keepTime": true,
+              "replace": true,
+              "source": "devices"
+            }
+          },
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 1"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 2"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 3"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": " Tuya 4"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 5"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Tuya 6"
+                }
+              ],
+              "fields": {}
+            }
+          },
+          {
+            "id": "sortBy",
+            "options": {
+              "fields": {},
+              "sort": [
+                {
+                  "field": "Time"
+                }
+              ]
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "gauge"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 11
+        },
+        "id": 6,
+        "panels": [],
+        "title": "Nmap Sweeper",
+        "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 46,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": true,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-purple",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 40
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 21,
+          "x": 0,
+          "y": 12
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-sweep\"} | json",
+            "hide": false,
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Devices per Interval",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "source": "Line"
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "semi-dark-green",
+                  "value": null
+                },
+                {
+                  "color": "light-orange",
+                  "value": 40
+                },
+                {
+                  "color": "dark-red",
+                  "value": 50
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 3,
+          "x": 21,
+          "y": 12
+        },
+        "id": 11,
+        "options": {
+          "displayMode": "gradient",
+          "minVizHeight": 10,
+          "minVizWidth": 0,
+          "orientation": "horizontal",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "/^device_count$/",
+            "values": false
+          },
+          "showUnfilled": true,
+          "valueMode": "color"
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-sweep\"} | json",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Latest Device Count",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "keepTime": true,
+              "replace": true,
+              "source": "Line"
+            }
+          },
+          {
+            "id": "sortBy",
+            "options": {
+              "fields": {},
+              "sort": [
+                {
+                  "field": "Time"
+                }
+              ]
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "bargauge"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 3,
+          "x": 21,
+          "y": 17
+        },
+        "id": 4,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<img src=\"data:image/png;base64,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\r\n\r\n\" alt=\"Red dot\"/>",
+          "mode": "html"
+        },
+        "pluginVersion": "10.0.3",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "fixedColor": "red",
+              "mode": "shades"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 8,
+          "x": 0,
+          "y": 22
+        },
+        "id": 13,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-outliers\"} | json",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Outliers Per Time",
+        "transformations": [
+          {
+            "id": "extractFields",
+            "options": {
+              "format": "json",
+              "jsonPaths": [
+                {
+                  "path": "count"
+                }
+              ],
+              "keepTime": true,
+              "replace": true,
+              "source": "Line"
+            }
+          },
+          {
+            "id": "sortBy",
+            "options": {
+              "fields": {},
+              "sort": [
+                {
+                  "desc": false,
+                  "field": "Time"
+                }
+              ]
+            }
+          },
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "number",
+                  "targetField": "count"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 16,
+          "x": 8,
+          "y": 22
+        },
+        "id": 12,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": true,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-outliers\"} | json",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Outliers",
+        "transformations": [],
+        "transparent": true,
+        "type": "logs"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 5,
+          "x": 0,
+          "y": 29
+        },
+        "id": 3,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": true,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-stats\"} |= ``",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Scanner Status",
+        "transparent": true,
+        "type": "logs"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 19,
+          "x": 5,
+          "y": 29
+        },
+        "id": 1,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": true,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "10.0.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "f56052b0-09ea-4f82-b875-5410e5cc850c"
+            },
+            "editorMode": "builder",
+            "expr": "{logger=\"nmap-sweep\"} | json | __error__=``",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Scan Logs",
+        "transparent": true,
+        "type": "logs"
+      }
+    ],
+    "refresh": "1m",
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "nmap sweeper",
+    "uid": "bb9d0b4c-09b1-4995-a734-cb9828cc3998",
+    "version": 27,
+    "weekStart": ""
+  }

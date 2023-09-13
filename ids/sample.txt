@@ -1,0 +1,103 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-08-12 16:52 Malay Peninsula Standard Time
+Nmap scan report for TUF-AX5400-07E8.Midkemia (192.168.0.1)
+Host is up (0.014s latency).
+MAC Address: A0:36:BC:50:07:E8 (Asustek Computer)
+Nmap scan report for 192.168.0.4
+Host is up (0.16s latency).
+MAC Address: 38:1F:8D:20:87:55 (Tuya Smart)
+Nmap scan report for 192.168.0.5
+Host is up (0.16s latency).
+MAC Address: 38:1F:8D:20:83:EA (Tuya Smart)
+Nmap scan report for 192.168.0.6
+Host is up (0.16s latency).
+MAC Address: 70:48:F7:5E:BB:8C (Nintendo)
+Nmap scan report for 192.168.0.10
+Host is up (0.0060s latency).
+MAC Address: 48:E7:DA:9C:73:32 (AzureWave Technology)
+Nmap scan report for 192.168.0.16
+Host is up (0.014s latency).
+MAC Address: 68:8F:C9:80:FC:FE (Zhuolian (Shenzhen) Communication)
+Nmap scan report for 192.168.0.18
+Host is up (0.16s latency).
+MAC Address: AC:67:84:06:FF:18 (Google)
+Nmap scan report for 192.168.0.22
+Host is up (0.0080s latency).
+MAC Address: 48:E7:DA:68:81:CA (AzureWave Technology)
+Nmap scan report for a113d-102c6bfa9eda.Midkemia (192.168.0.31)
+Host is up (0.040s latency).
+MAC Address: 10:2C:6B:FA:9E:DA (Ampak Technology)
+Nmap scan report for dmaker-fan-1c_miap5CFC.Midkemia (192.168.0.39)
+Host is up (0.017s latency).
+MAC Address: 54:48:E6:47:5C:FC (Beijing Xiaomi Mobile Software)
+Nmap scan report for 192.168.0.41
+Host is up (0.087s latency).
+MAC Address: 90:E8:68:75:80:08 (AzureWave Technology)
+Nmap scan report for Samsung.Midkemia (192.168.0.44)
+Host is up (0.081s latency).
+MAC Address: 04:B9:E3:08:B6:12 (Samsung Electronics)
+Nmap scan report for 192.168.0.48
+Host is up (0.22s latency).
+MAC Address: 20:DF:B9:2C:83:BF (Google)
+Nmap scan report for 192.168.0.55
+Host is up (0.0090s latency).
+MAC Address: 48:E7:DA:F8:07:D5 (AzureWave Technology)
+Nmap scan report for Janice-s-S10.Midkemia (192.168.0.56)
+Host is up (0.16s latency).
+MAC Address: 4E:31:8D:33:CA:6C (Unknown)
+Nmap scan report for SIMON-s-S20.Midkemia (192.168.0.59)
+Host is up (0.20s latency).
+MAC Address: AA:85:A6:C9:54:19 (Unknown)
+Nmap scan report for 192.168.0.61
+Host is up (0.20s latency).
+MAC Address: 20:DF:B9:0F:8B:0D (Google)
+Nmap scan report for archimedes-desktop.Midkemia (192.168.0.62)
+Host is up (0.22s latency).
+MAC Address: D8:3A:DD:25:A9:DE (Unknown)
+Nmap scan report for wlan0.Midkemia (192.168.0.65)
+Host is up (0.19s latency).
+MAC Address: 70:89:76:00:53:D1 (Tuya Smart)
+Nmap scan report for citationmarvell-dcf505e153b9.Midkemia (192.168.0.66)
+Host is up (0.013s latency).
+MAC Address: DC:F5:05:E1:53:B9 (AzureWave Technology)
+Nmap scan report for 192.168.0.69
+Host is up (0.0070s latency).
+MAC Address: FC:34:97:19:AF:48 (Asustek Computer)
+Nmap scan report for 192.168.0.70
+Host is up (0.16s latency).
+MAC Address: 90:E8:68:75:C8:D7 (AzureWave Technology)
+Nmap scan report for L920.Midkemia (192.168.0.71)
+Host is up (0.15s latency).
+MAC Address: 9C:53:22:3E:E9:44 (Unknown)
+Nmap scan report for 192.168.0.76
+Host is up (0.14s latency).
+MAC Address: 38:1F:8D:20:7D:87 (Tuya Smart)
+Nmap scan report for 192.168.0.78
+Host is up (0.0040s latency).
+MAC Address: 54:60:09:FF:F0:12 (Google)
+Nmap scan report for Google-Home.Midkemia (192.168.0.79)
+Host is up (0.0070s latency).
+MAC Address: 48:D6:D5:82:39:9D (Google)
+Nmap scan report for 192.168.0.85
+Host is up (0.13s latency).
+MAC Address: 30:95:87:46:62:31 (Hunan Fn-link Technology Limited)
+Nmap scan report for 192.168.0.87
+Host is up (0.13s latency).
+MAC Address: 38:1F:8D:20:88:21 (Tuya Smart)
+Nmap scan report for Pixel-6-Pro.Midkemia (192.168.0.91)
+Host is up (0.11s latency).
+MAC Address: 7A:76:7E:05:AB:73 (Unknown)
+Nmap scan report for 192.168.0.94
+Host is up (0.11s latency).
+MAC Address: 38:1F:8D:20:82:A4 (Tuya Smart)
+Nmap scan report for HP9D1567.Midkemia (192.168.0.95)
+Host is up (0.012s latency).
+MAC Address: 7C:57:58:9D:15:67 (Unknown)
+Nmap scan report for 192.168.0.100
+Host is up (0.010s latency).
+MAC Address: 00:11:32:5C:F6:51 (Synology Incorporated)
+Nmap scan report for 192.168.0.255
+Host is up (0.14s latency).
+MAC Address: AC:67:84:06:FF:18 (Google)
+Nmap scan report for DESKTOP-Q86P8G3.Midkemia (192.168.0.82)
+Host is up.
+Nmap done: 256 IP addresses (34 hosts up) scanned in 4.72 seconds

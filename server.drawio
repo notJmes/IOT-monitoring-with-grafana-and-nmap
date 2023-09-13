@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" modified="2023-09-11T04:36:42.873Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="QgaxETBtvZs45RDYXF5P" version="21.7.4" type="device">
+  <diagram name="Page-1" id="-zbG-CWRN3AHDPWp5oxR">
+    <mxGraphModel dx="1434" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="AZwSm7qYHBrWcVf1t7ID-2" target="AZwSm7qYHBrWcVf1t7ID-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" parent="1" vertex="1">
+          <mxGeometry x="560" y="456" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-3" value="Raspberry Pi 4 server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="370" y="195" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="AZwSm7qYHBrWcVf1t7ID-4" target="AZwSm7qYHBrWcVf1t7ID-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-4" value="Scan devices in local network with Nmap and Python" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-5" value="Dashboard, Logging and monitoring" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="539" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="AZwSm7qYHBrWcVf1t7ID-4" target="AZwSm7qYHBrWcVf1t7ID-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="430" />
+              <mxPoint x="200" y="310" />
+              <mxPoint x="40" y="310" />
+              <mxPoint x="40" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-7" value="Repeats every 5 mins" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="50" y="280" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="AZwSm7qYHBrWcVf1t7ID-8" target="AZwSm7qYHBrWcVf1t7ID-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-8" value="Loki" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="320" y="460" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-10" value="Push logs to Loki" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="160" y="500" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-12" value="Grafana" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="639" y="480" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-14" value="localhost:3100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="310" y="535" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-15" value="localhost:3000" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="550" y="535" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AZwSm7qYHBrWcVf1t7ID-19" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;rotation=90;" parent="1" vertex="1">
+          <mxGeometry x="362.5" y="-67.5" width="20" height="665" as="geometry" />
+        </mxCell>
+        <mxCell id="XxDe03cNVA3iRH4uC4hV-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://download.logo.wine/logo/Raspberry_Pi/Raspberry_Pi-Logo.wine.png;" vertex="1" parent="1">
+          <mxGeometry x="310" y="178.75" width="93.75" height="62.5" as="geometry" />
+        </mxCell>
+        <mxCell id="XxDe03cNVA3iRH4uC4hV-2" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png;" vertex="1" parent="1">
+          <mxGeometry x="101.75" y="340" width="36.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XxDe03cNVA3iRH4uC4hV-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="XxDe03cNVA3iRH4uC4hV-4" target="AZwSm7qYHBrWcVf1t7ID-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XxDe03cNVA3iRH4uC4hV-4" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.servers;" vertex="1" parent="1">
+          <mxGeometry x="322" y="331" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="XxDe03cNVA3iRH4uC4hV-5" value="Samba" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="403.75" y="355" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
